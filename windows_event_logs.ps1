@@ -3,9 +3,6 @@
 # Create a CSV file limited to Errors and Warnings from Application and System Events since the last 7 days
 # Create a zip file of all the above files and open the explorer window to the location of all these files for easy transfer
 
-# Allow script to run temporarily
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force;
-
 Set-Variable -Name EventAgeDays -Value 7 # we will take events for the latest 7 days
 Set-Variable -Name LogNames -Value @("Application”, "System”) # Checking application and system logs
 Set-Variable -Name EventTypes -Value @("Error”, "Warning”) # Loading only Errors and Warnings
